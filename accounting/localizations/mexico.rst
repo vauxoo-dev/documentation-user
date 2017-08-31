@@ -57,7 +57,8 @@ First, make sure that your company is configured with the correct data.
 Go in :menuselection:`Settings --> Users --> Companies`
 and enter a valid address and VAT for
 your company. Don’t forget to define a mexican fiscal position on your
-company’s contact.
+company’s contact. This fiscal position will be used to indicate the
+fiscal regime to which the company apply.
 
 .. tip::
    If you want to test the Mexican Localization, you can copy the
@@ -87,7 +88,7 @@ password.
 
 .. |download_mexico_certificate_cer| image:: ../../_static/banners/download-icon.png
       :alt: Certificate
-      :target: ../../_static/files/certificate.cer
+      :target ../../_static/files/certificate.cer
 
 .. |download_mexico_certificate_key| image:: ../../_static/banners/download-icon.png
       :alt: Certificate Key
@@ -109,3 +110,26 @@ and *Update PAC status*. Your invoice status will be updated.
 
 .. image:: media/mexico06.png
    :align: center
+
+CFDI version 3.3
+~~~~~~~~~~~~~~~~~~~~~~
+
+Extra configurations
+^^^^^^^^^^^^^^^^^^^^
+
+In the sale taxes, must be assigned a new tag, this tag will be used to
+the attribute **TipoFactor** that is required in the CFDI to each tax.
+
+The tags to this feature have in you name the label *Factor:*
+
+.. image:: media/mexico07.png
+   :align: center
+
+In the products must be defined the key that the SAT provide to be used
+in the attribute **ClaveProdServ** by each concept in the CFDI.
+
+.. image:: media/mexico08.png
+   :align: center
+
+The attribute **UsoCFDI** in the CFDI will be assigned from the value in
+the field *Usage* that is defined in the invoice.
